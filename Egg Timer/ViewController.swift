@@ -10,17 +10,19 @@ import AVFAudio
 
 class ViewController: UIViewController {
     
-    // Dictionary
-    let eggTime: [String:Int] = ["softEgg": 5, "mediumEgg": 10, "hardEgg": 8]
+    // a dictionary to store enough minutes for each hardness
+    let eggTime: [String:Int] = ["softEgg": 4, "mediumEgg": 6, "hardEgg": 8]
     
+    // a variable that stores total egg time and is used in progress bar
     var totalTime = 0
     
+    // a variable to store passed seconds in progress bar
     var secondsPassed = 0
     
     // Countdown Timer
     var timer = Timer()
     
-    // result label
+    // a UILable to display default question and result
     @IBOutlet weak var resultUILabel: UILabel!
     
     // Progress Bar
@@ -31,8 +33,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var mediumUILabel: UILabel!
     @IBOutlet weak var hardUILabel: UILabel!
     
+    // player used to play alarm when egg is ready
     var player: AVAudioPlayer?
-    
+    // the url of the alarm.wav file
     let url = Bundle.main.url(forResource: "alarm", withExtension: "wav")
     
     override func viewDidLoad() {
@@ -68,7 +71,7 @@ class ViewController: UIViewController {
         // total time of the selectedEgg
         totalTime = eggTime[selectedEgg]!
         
-        // set label to default
+        // set label to default question instead of "YOUR EGG IS READY!"
         resultUILabel.text = "How do you like your Eggs?"
         
         // Cancel previous progress bar and set it to zero
@@ -115,7 +118,7 @@ class ViewController: UIViewController {
             
         }else{
             timer.invalidate()
-            resultUILabel.text = "Done"
+            resultUILabel.text = "YOUR EGG IS READY!"
             playAlarm()
         }
     }

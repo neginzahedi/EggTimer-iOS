@@ -132,7 +132,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Xe-wj-cak" userLabel="timerView">
                                         <rect key="frame" x="0.0" y="746.5" width="360" height="149.5"/>
                                         <subviews>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5V5-5i-ddD">
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5V5-5i-ddD">
                                                 <rect key="frame" x="10" y="70" width="340" height="10"/>
                                                 <color key="tintColor" red="0.94117647410000005" green="0.76470589639999997" blue="0.40000003579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
@@ -151,7 +151,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.93588966129999995" green="0.98063093420000003" blue="0.98896986249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="d9M-pO-1Xf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MFh-vU-dYT"/>
                             <constraint firstAttribute="bottom" secondItem="d9M-pO-1Xf" secondAttribute="bottom" id="QFA-Uw-afd"/>
