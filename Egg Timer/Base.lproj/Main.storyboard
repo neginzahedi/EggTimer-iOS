@@ -30,7 +30,7 @@
                                                     <constraint firstAttribute="width" constant="350" id="cUZ-fl-6Ya"/>
                                                     <constraint firstAttribute="height" constant="100" id="eJL-ak-Nrb"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="38"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="38"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -47,7 +47,7 @@
                                         <rect key="frame" x="0.0" y="448" width="360" height="149.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zLm-kt-CuV" userLabel="softEggView">
-                                                <rect key="frame" x="0.0" y="1.5" width="120" height="146"/>
+                                                <rect key="frame" x="0.0" y="3" width="120" height="143.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkK-NK-wz8" userLabel="softEgg">
                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -65,15 +65,15 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPb-1F-1BX">
-                                                        <rect key="frame" x="0.0" y="120" width="120" height="26"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                        <rect key="frame" x="0.0" y="120" width="120" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cHJ-qH-3o1" userLabel="mediumEggView">
-                                                <rect key="frame" x="120" y="1.5" width="120" height="146"/>
+                                                <rect key="frame" x="120" y="3" width="120" height="143.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iTh-1v-TUI" userLabel="mediumEgg">
                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -91,15 +91,15 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DmD-Sc-qfb">
-                                                        <rect key="frame" x="0.0" y="120" width="120" height="26"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                        <rect key="frame" x="0.0" y="120" width="120" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AZA-wd-d8a" userLabel="hardEggView">
-                                                <rect key="frame" x="240" y="1.5" width="120" height="146"/>
+                                                <rect key="frame" x="240" y="3" width="120" height="143.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krq-PZ-nPu" userLabel="hardEgg">
                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -117,8 +117,8 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njr-hA-0f1">
-                                                        <rect key="frame" x="0.0" y="120" width="120" height="26"/>
-                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                        <rect key="frame" x="0.0" y="120" width="120" height="23.5"/>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -134,6 +134,7 @@
                                         <subviews>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5V5-5i-ddD">
                                                 <rect key="frame" x="10" y="70" width="340" height="10"/>
+                                                <color key="tintColor" red="0.94117647410000005" green="0.76470589639999997" blue="0.40000003579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="10" id="Byh-Y1-T8C"/>
                                                 </constraints>
@@ -150,7 +151,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.96841138601303101" green="0.94093317088730244" blue="0.75447287423782439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="d9M-pO-1Xf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MFh-vU-dYT"/>
                             <constraint firstAttribute="bottom" secondItem="d9M-pO-1Xf" secondAttribute="bottom" id="QFA-Uw-afd"/>
@@ -159,7 +160,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="hardUILabel" destination="njr-hA-0f1" id="w0g-WQ-wcP"/>
+                        <outlet property="mediumUILabel" destination="DmD-Sc-qfb" id="gaQ-DV-G19"/>
                         <outlet property="resultUILabel" destination="yK3-pp-TMJ" id="8dm-Ib-CUs"/>
+                        <outlet property="softUILabel" destination="tPb-1F-1BX" id="Azh-dQ-pkb"/>
+                        <outlet property="timerUIProgressview" destination="5V5-5i-ddD" id="18W-Xd-HjF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -168,8 +173,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hardEgg" width="500" height="500"/>
-        <image name="mediumEgg" width="1500" height="1500"/>
-        <image name="softEgg" width="500" height="500"/>
+        <image name="hardEgg" width="1080" height="1080"/>
+        <image name="mediumEgg" width="1080" height="1080"/>
+        <image name="softEgg" width="1080" height="1080"/>
     </resources>
 </document>

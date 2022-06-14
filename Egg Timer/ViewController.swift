@@ -6,48 +6,117 @@
 //
 
 import UIKit
+import AVFAudio
 
 class ViewController: UIViewController {
     
     // Dictionary
-    let eggTime: [String:Int] = ["softEgg": 5, "mediumEgg": 420, "hardEgg": 720]
+    let eggTime: [String:Int] = ["softEgg": 5, "mediumEgg": 10, "hardEgg": 8]
     
-    var secondsRemaining: Int = 60
+    var totalTime = 0
+    
+    var secondsPassed = 0
     
     // Countdown Timer
     var timer = Timer()
     
+    // result label
     @IBOutlet weak var resultUILabel: UILabel!
+    
+    // Progress Bar
+    @IBOutlet weak var timerUIProgressview: UIProgressView!
+    
+    // Egg labels
+    @IBOutlet weak var softUILabel: UILabel!
+    @IBOutlet weak var mediumUILabel: UILabel!
+    @IBOutlet weak var hardUILabel: UILabel!
+    
+    var player: AVAudioPlayer?
+    
+    let url = Bundle.main.url(forResource: "alarm", withExtension: "wav")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        
     }
     
     
     @IBAction func EggSelected(_ sender: UIButton) {
-        let selectedEgg = sender.accessibilityLabel!
-        print(eggTime[selectedEgg]!)
         
-        secondsRemaining = eggTime[selectedEgg]!
+        // title of the selected button
+        let selectedEgg = sender.accessibilityLabel!
+        
+        // label of selected egg changed to orange, by default is black
+        switch selectedEgg {
+        case "softEgg":
+            softUILabel.textColor = UIColor.orange
+            mediumUILabel.textColor = UIColor.black
+            hardUILabel.textColor = UIColor.black
+        case "mediumEgg":
+            mediumUILabel.textColor = UIColor.orange
+            softUILabel.textColor = UIColor.black
+            hardUILabel.textColor = UIColor.black
+        case "hardEgg":
+            hardUILabel.textColor = UIColor.orange
+            softUILabel.textColor = UIColor.black
+            mediumUILabel.textColor = UIColor.black
+        default:
+            softUILabel.textColor = UIColor.black
+            mediumUILabel.textColor = UIColor.black
+            hardUILabel.textColor = UIColor.black
+        }
+        
+        // total time of the selectedEgg
+        totalTime = eggTime[selectedEgg]!
+        
+        // set label to default
+        resultUILabel.text = "How do you like your Eggs?"
+        
+        // Cancel previous progress bar and set it to zero
+        timerUIProgressview.progress = 0.0
+        secondsPassed = 0
+        
         // Cancel previous timer if a new button is selected
         timer.invalidate()
         
         // Create a new timer
-        // Parameters (timerInterval: updates every 1 second, repeats: timer repeats after each seconds, selector: is a function that is called every seconds)
+        /* Parameters:
+         - timeInterval: updates every 1 second
+         - repeats: timer repeats after each seconds (true or false)
+         - selector: is a function that is called every seconds)
+         */
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        pauseAlarm()
+        
+    }
+    
+    func playAlarm(){
+        do{
+            player = try AVAudioPlayer(contentsOf: self.url!)
+            player?.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func pauseAlarm(){
+        do{
+            player = try AVAudioPlayer(contentsOf: self.url!)
+            player?.pause()
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
     
     // Print each secondsRemaining
     @objc func updateTimer(){
-        if secondsRemaining > 0 {
-            print ("\(secondsRemaining) seconds")
-            secondsRemaining -= 1
+        if secondsPassed < totalTime {
+            secondsPassed += 1
+            timerUIProgressview.progress = Float(secondsPassed) / Float(totalTime)
+            
         }else{
             timer.invalidate()
             resultUILabel.text = "Done"
+            playAlarm()
         }
     }
 }
